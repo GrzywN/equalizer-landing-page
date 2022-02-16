@@ -1,0 +1,361 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+/* Variables */
+/* CSS */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./assets/bg-pattern-1.svg), url(./assets/bg-main-desktop.png);
+  background-size: cover contain;
+  background-repeat: no-repeat;
+  background-position: right top, right -17.1875rem top -1.25rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-block: 4em;
+  padding-inline: 10.25em;
+}
+
+.section {
+  width: 100%;
+}
+
+.section__header {
+  color: #191826;
+  margin-top: 9.25rem;
+  max-width: 80%;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 5.5rem;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+.section__paragraph {
+  color: #191826;
+  margin-top: 2.5rem;
+  max-width: 85%;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 2, 125rem;
+}
+
+.section__illustration {
+  max-height: 40.125rem;
+  -webkit-transform: translateY(-13.375rem);
+          transform: translateY(-13.375rem);
+}
+
+.section--card {
+  border-radius: 0.625rem;
+  padding-inline: 6rem;
+  margin-top: 20rem;
+  margin-bottom: 5.625rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #191826;
+  background-image: url(./assets/bg-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-position: left 23.4375rem top -2.375rem;
+}
+
+.card {
+  -webkit-transform: translateY(5.625rem);
+          transform: translateY(5.625rem);
+  max-width: 27.875rem;
+  background-color: #fa7453;
+  color: #fcfaf9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 4.75em;
+  padding-bottom: 3em;
+  padding-inline: 2em;
+  border-radius: 0.625rem;
+}
+
+.card__header {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  margin-bottom: 1em;
+}
+
+.card__paragraph {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  margin-bottom: 1.5em;
+  max-width: 20.625rem;
+  width: 80%;
+}
+
+.card__price {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__per-month {
+  margin-left: 1ch;
+  font-weight: 400;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.25rem;
+}
+
+.card__button {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  max-width: 55.5rem;
+  padding: 1em 3em;
+  border: 0;
+  border-radius: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5ch;
+}
+
+.card__button--ios {
+  background-color: #191826;
+  color: #fcfaf9;
+  margin-bottom: 1em;
+}
+
+.card__button--ios:hover {
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+  background-color: #66e2dc;
+}
+
+.card__button--android {
+  background-color: #fcfaf9;
+  color: #191826;
+}
+
+.card__button--android:hover {
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+  background-color: #ffb964;
+}
+
+.card__button-img {
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.footer {
+  margin-top: 9.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.footer__paragraph {
+  color: #191826;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.625rem;
+  width: 35%;
+}
+
+.footer__e-mail {
+  color: #191826;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer__e-mail:hover {
+  color: #fa7453;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+
+.footer__socials-ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25em;
+}
+
+.footer__socials-a:hover {
+  -webkit-filter: invert(56%) sepia(93%) saturate(1292%) hue-rotate(324deg) brightness(98%) contrast(100%);
+          filter: invert(56%) sepia(93%) saturate(1292%) hue-rotate(324deg) brightness(98%) contrast(100%);
+}
+
+.footer__socials-a:hover > svg {
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  transition: transform 250ms ease, -webkit-transform 250ms ease;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.footer__socials-icon {
+  fill: #191826;
+}
+
+@media screen and (max-width: 80rem) {
+  body {
+    background-image: url(./assets/bg-pattern-1.svg), url(./assets/bg-main-tablet.png);
+    background-position: right -2rem top -2.5rem, center top 18.75rem;
+    padding-inline: 2rem;
+  }
+  .section__header {
+    font-size: 350%;
+    max-width: 60%;
+  }
+  .section__paragraph {
+    justify-self: flex-start;
+    max-width: 80%;
+  }
+  .section--card {
+    position: relative;
+    min-height: 40.125rem;
+    background-position: top top;
+  }
+  .section__illustration {
+    position: absolute;
+    left: 4rem;
+  }
+  .card {
+    -webkit-transform: translateY(9.375rem);
+            transform: translateY(9.375rem);
+    position: absolute;
+    right: 4rem;
+    z-index: 1;
+  }
+  .card__header {
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (min-width: 44.6875rem) and (max-width: 64rem) {
+  .section--card {
+    background-position: top left 15.625rem;
+  }
+  .footer {
+    position: relative;
+  }
+  .footer__logo {
+    position: absolute;
+    bottom: calc(100% + 2rem);
+  }
+  .footer__paragraph {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  body {
+    background-image: url(./assets/bg-main-mobile.png);
+    background-position: top -12.5rem right -12.5rem;
+    padding-inline: 0;
+  }
+  .header {
+    padding-inline: 1.5rem;
+  }
+  .section {
+    padding-inline: 1.5rem;
+  }
+  .section__header {
+    font-size: 300%;
+    max-width: 90vw;
+    margin-top: 2rem;
+  }
+  .section__paragraph {
+    max-width: 90vw;
+  }
+  .section--card {
+    height: 58.375rem;
+    position: static;
+    background-position: top center;
+  }
+  .section__illustration {
+    position: static;
+    -webkit-transform: translateY(-13.375rem) scale(0.8);
+            transform: translateY(-13.375rem) scale(0.8);
+  }
+  .card {
+    min-width: 100vw;
+    position: static;
+    -webkit-transform: translateY(-13.375rem);
+            transform: translateY(-13.375rem);
+  }
+  .card__button {
+    max-width: 100%;
+  }
+  .footer {
+    padding-inline: 1.5rem;
+    height: 100%;
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .footer__paragraph {
+    width: 90%;
+  }
+  .footer__socials {
+    margin-top: 0.5rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

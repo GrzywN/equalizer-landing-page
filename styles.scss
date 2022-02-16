@@ -1,0 +1,312 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+/* Variables */
+
+// Colors //
+
+$cyan: rgb(102, 226, 220);
+$orange: rgb(250, 116, 83);
+$peach: rgb(255, 185, 100);
+$white: rgb(252, 250, 249);
+$black: rgb(25, 24, 38);
+
+// Fonts
+
+$font-family: "IBM Plex Sans", sans-serif;
+
+// Border
+
+$border-radius: 0.625rem;
+
+/* CSS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./assets/bg-pattern-1.svg),
+    url(./assets/bg-main-desktop.png);
+  background-size: cover contain;
+  background-repeat: no-repeat;
+  background-position: right top, right -17.1875rem top -1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 4em;
+  padding-inline: 10.25em;
+}
+
+.section {
+  width: 100%;
+  &__header {
+    color: $black;
+    margin-top: 9.25rem;
+    max-width: 80%;
+    font-family: $font-family;
+    font-size: 5.5rem;
+    line-height: 100%;
+    letter-spacing: -1px;
+  }
+  &__paragraph {
+    color: $black;
+    margin-top: 2.5rem;
+    max-width: 85%;
+    font-family: $font-family;
+    font-size: 1.25rem;
+    line-height: 2, 125rem;
+  }
+  &__illustration {
+    max-height: 40.125rem;
+    transform: translateY(-13.375rem);
+  }
+  &--card {
+    border-radius: $border-radius;
+    padding-inline: 6rem;
+    margin-top: 20rem;
+    margin-bottom: 5.625rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: $black;
+    background-image: url(./assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: left 23.4375rem top -2.375rem;
+  }
+}
+
+.card {
+  transform: translateY(5.625rem);
+  max-width: 27.875rem;
+  background-color: $orange;
+  color: $white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding-top: 4.75em;
+  padding-bottom: 3em;
+  padding-inline: 2em;
+  border-radius: $border-radius;
+  &__header {
+    font-family: $font-family;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    margin-bottom: 1em;
+  }
+  &__paragraph {
+    font-family: $font-family;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.5em;
+    max-width: 20.625rem;
+    width: 80%;
+  }
+  &__price {
+    font-family: $font-family;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  &__per-month {
+    margin-left: 1ch;
+    font-weight: 400;
+    font-family: $font-family;
+    font-size: 1.25rem;
+  }
+  &__button {
+    font-family: $font-family;
+    font-weight: bold;
+    width: 100%;
+    max-width: 55.5rem;
+    padding: 1em 3em;
+    border: 0;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5ch;
+    &--ios {
+      background-color: $black;
+      color: $white;
+      margin-bottom: 1em;
+      &:hover {
+        transition: background-color 200ms ease;
+        background-color: $cyan;
+      }
+    }
+    &--android {
+      background-color: $white;
+      color: $black;
+      &:hover {
+        transition: background-color 200ms ease;
+        background-color: $peach;
+      }
+    }
+    &-img {
+      object-position: center center;
+    }
+  }
+}
+
+.footer {
+  margin-top: 9.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    align-self: flex-start;
+  }
+  &__paragraph {
+    color: $black;
+    font-family: $font-family;
+    line-height: 1.625rem;
+    width: 35%;
+  }
+  &__e-mail {
+    color: $black;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      color: $orange;
+      transition: color 200ms ease;
+    }
+  }
+  &__socials {
+    &-ul {
+      list-style-type: none;
+      display: flex;
+      gap: 1.25em;
+    }
+    &-a {
+      &:hover {
+        filter: invert(56%) sepia(93%) saturate(1292%) hue-rotate(324deg)
+          brightness(98%) contrast(100%);
+      }
+      &:hover > svg {
+        transition: transform 250ms ease;
+        transform: scale(1.25);
+      }
+    }
+    &-icon {
+      fill: $black;
+    }
+  }
+}
+
+@media screen and (max-width: 80rem) {
+  body {
+    background-image: url(./assets/bg-pattern-1.svg),
+      url(./assets/bg-main-tablet.png);
+    background-position: right -2rem top -2.5rem, center top 18.75rem;
+    padding-inline: 2rem;
+  }
+  .section {
+    &__header {
+      font-size: 350%;
+      max-width: 60%;
+    }
+    &__paragraph {
+      justify-self: flex-start;
+      max-width: 80%;
+    }
+    &--card {
+      position: relative;
+      min-height: 40.125rem;
+      background-position: top top;
+    }
+    &__illustration {
+      position: absolute;
+      left: 4rem;
+    }
+  }
+
+  .card {
+    transform: translateY(9.375rem);
+    position: absolute;
+    right: 4rem;
+    z-index: 1;
+    &__header {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+@media (min-width: 44.6875rem) and (max-width: 64rem) {
+  .section {
+    &--card {
+      background-position: top left 15.625rem;
+    }
+  }
+  .footer {
+    position: relative;
+    &__logo {
+      position: absolute;
+      bottom: calc(100% + 2rem);
+    }
+    &__paragraph {
+      width: 50vw;
+    }
+  }
+}
+@media screen and (max-width: 45rem) {
+  body {
+    background-image: url(./assets/bg-main-mobile.png);
+    background-position: top -12.5rem right -12.5rem;
+    padding-inline: 0;
+  }
+  .header {
+    padding-inline: 1.5rem;
+  }
+  .section {
+    padding-inline: 1.5rem;
+    &__header {
+      font-size: 300%;
+      max-width: 90vw;
+      margin-top: 2rem;
+    }
+    &__paragraph {
+      max-width: 90vw;
+    }
+    &--card {
+      height: 58.375rem;
+      position: static;
+      background-position: top center;
+    }
+    &__illustration {
+      position: static;
+      transform: translateY(-13.375rem) scale(0.8);
+    }
+  }
+  .card {
+    min-width: 100vw;
+    position: static;
+    transform: translateY(-13.375rem);
+    &__button {
+      max-width: 100%;
+    }
+  }
+  .footer {
+    padding-inline: 1.5rem;
+    height: 100%;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    &__paragraph {
+      width: 90%;
+    }
+    &__socials {
+      margin-top: 0.5rem;
+    }
+  }
+}
